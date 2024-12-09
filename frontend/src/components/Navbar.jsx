@@ -55,7 +55,7 @@ export function Navbar() {
 
                         <Link
                             to={
-                                "https://sports-admin-dashboard-frontend.vercel.app/"
+                                "https://sports-admin-xi.vercel.app/"
                             }
                             target="_blank"
                             type="button"
@@ -110,7 +110,7 @@ export function Navbar() {
                                             <Link
                                                 onClick={toggleMenu}
                                                 to={
-                                                    "https://sports-admin-dashboard-frontend.vercel.app/"
+                                                    "https://sports-admin-xi.vercel.app/"
                                                 }
                                                 target="_blank"
                                                 type="button"
