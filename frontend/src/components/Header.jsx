@@ -28,7 +28,7 @@ const Header = () => {
                                 Affiliated with: Taekwondo Federation of India
                                 (TFI) <br />
                                 <span className="text-base leading-tight block mb-4">
-                                    Recognised By : J & K Sports Council (JKSC),
+                                    Recognised By : Mr. Saifi Sports Council (JKSC),
                                     Indian Olympic Association (IOA)
                                 </span>
                             </p>

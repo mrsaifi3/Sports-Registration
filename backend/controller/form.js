@@ -210,8 +210,8 @@ exports.register = async (req, res, next) => {
         await sendWithAttachment(
             adminEmail,
             `New Coach Registration Intiated (${newCoach.regNo}) - Payment Pending`,
-            `Dear Admin,\n\nA new coach registration has been initiated with the following details:\n\nName: ${newCoach.playerName}\nRegistration Number: ${newCoach.regNo}\nEmail: ${newCoach.email}\nMobile: ${newCoach.mob}\nDistrict: ${newCoach.district}\n\nWe are awaiting payment confirmation for this registration. We will notify you once the payment is received.\n\nBest regards,\nJKTA Team`,
-            `<h3>Dear Admin,</h3><p>A new coach registration has been initiated with the following details:</p><ul><li><strong>Name:</strong> ${newCoach.playerName}</li><li><strong>Registration Number:</strong> ${newCoach.regNo}</li><li><strong>Email:</strong> ${newCoach.email}</li><li><strong>Mobile:</strong> ${newCoach.mob}</li><li><strong>District:</strong> ${newCoach.district}</li></ul><p>We are awaiting payment confirmation for this registration. We will notify you once the payment is received.</p><p>Best regards,<br>JKTA Team</p>`
+            `Dear Admin,\n\nA new coach registration has been initiated with the following details:\n\nName: ${newCoach.playerName}\nRegistration Number: ${newCoach.regNo}\nEmail: ${newCoach.email}\nMobile: ${newCoach.mob}\nDistrict: ${newCoach.district}\n\nWe are awaiting payment confirmation for this registration. We will notify you once the payment is received.\n\nBest regards,\nMr. Saifi Team`,
+            `<h3>Dear Admin,</h3><p>A new coach registration has been initiated with the following details:</p><ul><li><strong>Name:</strong> ${newCoach.playerName}</li><li><strong>Registration Number:</strong> ${newCoach.regNo}</li><li><strong>Email:</strong> ${newCoach.email}</li><li><strong>Mobile:</strong> ${newCoach.mob}</li><li><strong>District:</strong> ${newCoach.district}</li></ul><p>We are awaiting payment confirmation for this registration. We will notify you once the payment is received.</p><p>Best regards,<br>Mr. Saifi Team</p>`
         );
 
         // Send order details to the client for further processing
@@ -259,7 +259,7 @@ exports.verifyPayment = async (req, res) => {
             // const AthleteEnrollmentCount =
             //     await AtheleteEnrollment.countDocuments(); // as it returns a promise
             // const AthleteEnrollmentDetails = await AtheleteEnrollment.create({
-            //     enrollmentNumber: `JKTA${1000 + AthleteEnrollmentCount + 1}`,
+            //     enrollmentNumber: `Mr. Saifi${1000 + AthleteEnrollmentCount + 1}`,
             //     regNo: userData._id,
             // });
             // console.log(AthleteEnrollmentDetails);
@@ -286,16 +286,16 @@ exports.verifyPayment = async (req, res) => {
             await sendWithAttachment(
                 adminEmail,
                 `New Coach Registration Completed - Tracking Number: ${userData.regNo}`,
-                `Dear Admin,\n\nA new coach registration has been successfully completed with the following details:\n\nName: ${userData.athleteName}\nRegistration Number: ${userData.regNo}\nEmail: ${userData.email}\nMobile: ${userData.mob}\nDistrict: ${userData.district}\n\nWe have received the payment for this registration. Please verify the details and update the status accordingly.\n\nBest regards,\nJKTA Team`,
-                `<h3>Dear Admin,</h3><p>A new coach registration has been successfully completed with the following details:</p><ul><li><strong>Name:</strong> ${userData.athleteName}</li><li><strong>Registration Number:</strong> ${userData.regNo}</li><li><strong>Email:</strong> ${userData.email}</li><li><strong>Mobile:</strong> ${userData.mob}</li><li><strong>District:</strong> ${userData.district}</li></ul><p>We have received the payment for this registration. Please verify the details and update the status accordingly.</p><p>Best regards,<br>JKTA Team</p>`
+                `Dear Admin,\n\nA new coach registration has been successfully completed with the following details:\n\nName: ${userData.athleteName}\nRegistration Number: ${userData.regNo}\nEmail: ${userData.email}\nMobile: ${userData.mob}\nDistrict: ${userData.district}\n\nWe have received the payment for this registration. Please verify the details and update the status accordingly.\n\nBest regards,\nMr. Saifi Team`,
+                `<h3>Dear Admin,</h3><p>A new coach registration has been successfully completed with the following details:</p><ul><li><strong>Name:</strong> ${userData.athleteName}</li><li><strong>Registration Number:</strong> ${userData.regNo}</li><li><strong>Email:</strong> ${userData.email}</li><li><strong>Mobile:</strong> ${userData.mob}</li><li><strong>District:</strong> ${userData.district}</li></ul><p>We have received the payment for this registration. Please verify the details and update the status accordingly.</p><p>Best regards,<br>Mr. Saifi Team</p>`
             );
 
             // Send email to the user
             await sendWithAttachment(
                 userData.email,
                 `Payment Confirmation - Tracking Number: ${userData.regNo}`,
-                `Dear ${userData.athleteName},\n\nWe are pleased to inform you that your payment has been successfully received. Below are the details of your transaction:\n\nTracking Number: ${userData.regNo}\nPayment ID: ${razorpay_payment_id}\n\nOur team will verify your details shortly. If you have any questions or need further assistance, please do not hesitate to contact us.\n\nThank you for your trust in JKTA.\n\nBest regards,\nJKTA Team`,
-                `<h3>Dear ${userData.athleteName},</h3><p>We are pleased to inform you that your payment has been successfully received. Below are the details of your transaction:</p><ul><li><strong>Tracking Number:</strong> ${userData.regNo}</li><li><strong>Payment ID:</strong> ${razorpay_payment_id}</li></ul><p>Our team will verify your details shortly. If you have any questions or need further assistance, please do not hesitate to contact us.</p><p>Thank you for your trust in JKTA.</p><p>Best regards,<br>JKTA Team</p>`
+                `Dear ${userData.athleteName},\n\nWe are pleased to inform you that your payment has been successfully received. Below are the details of your transaction:\n\nTracking Number: ${userData.regNo}\nPayment ID: ${razorpay_payment_id}\n\nOur team will verify your details shortly. If you have any questions or need further assistance, please do not hesitate to contact us.\n\nThank you for your trust in Mr. Saifi.\n\nBest regards,\nMr. Saifi Team`,
+                `<h3>Dear ${userData.athleteName},</h3><p>We are pleased to inform you that your payment has been successfully received. Below are the details of your transaction:</p><ul><li><strong>Tracking Number:</strong> ${userData.regNo}</li><li><strong>Payment ID:</strong> ${razorpay_payment_id}</li></ul><p>Our team will verify your details shortly. If you have any questions or need further assistance, please do not hesitate to contact us.</p><p>Thank you for your trust in Mr. Saifi.</p><p>Best regards,<br>Mr. Saifi Team</p>`
             );
 
             // await deleteFiles(userData.regNo);

@@ -7,7 +7,7 @@ const Footer = () => {
                 {/* Logo and Title */}
                 <div className="flex items-center space-x-4">
                     <img
-                        src="https://res.cloudinary.com/dwiouayh7/image/upload/v1728839717/My%20Brand/veerRajpoot_mplaff.png"
+                        src="https://i.ibb.co/Ny7Y5ST/image-removebg-preview.png"
                         alt="Logo"
                         className="w-32 transition-transform duration-300 transform hover:scale-105 invert"
                     />
@@ -23,7 +23,7 @@ const Footer = () => {
                     <h3 className="text font-bold">Connect us</h3>
                     <div className="flex space-x-6 text-xl">
                         <a
-                            href="https://x.com/i_veerrajpoot"
+                            href="https://x.com/mrsaifi3" //twitter id mrsaifi3
                             aria-label="Twitter"
                             className="transition duration-300"
                             target="_blank"
@@ -31,7 +31,7 @@ const Footer = () => {
                             <i className="fab fa-twitter"></i>
                         </a>
                         <a
-                            href="https://instagram.com/i.veerrajpoot"
+                            href="https://instagram.com/mr_saifi_3"
                             aria-label="Instagram"
                             className="transition duration-300"
                             target="_blank"
@@ -39,7 +39,7 @@ const Footer = () => {
                             <i className="fab fa-instagram"></i>
                         </a>
                         <a
-                            href="https://linkedin.com/in/rahoolsingh"
+                            href="https://linkedin.com/in/mrsaifi3"
                             aria-label="LinkedIn"
                             className="transition duration-300"
                             target="_blank"
@@ -53,10 +53,10 @@ const Footer = () => {
             <div className="text-center -mb-3 py-3 text-xs md:text-sm text-white font-bold container px-4 m-auto lg:flex lg:justify-between">
                 <p className="flex gap-3 justify-center">
                     <Link
-                        to="https://instagram.com/i.veerrajpoot"
+                        to="https://instagram.com/mr_saifi_3"
                         className="hover:underline"
                     >
-                        Veer Rajpoot
+                       Mr Saifi
                     </Link>
                 </p>
                 <p>
