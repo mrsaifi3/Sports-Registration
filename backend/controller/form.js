@@ -253,7 +253,6 @@ exports.verifyPayment = async (req, res) => {
             // Payment verified successfully
             await User.findByIdAndUpdate(userData._id, {
                 payment: true,
-                status: "approved",
             });
 
             // const AthleteEnrollmentCount =
